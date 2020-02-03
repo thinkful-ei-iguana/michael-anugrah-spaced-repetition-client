@@ -11,6 +11,10 @@ import * as serviceWorker from './serviceWorker'
 ReactDOM.render(
   <BrowserRouter>
     <UserProvider>
+      <div className="o o1"></div>
+      <div className="o o2"></div>
+      <div className="o o3"></div>
+      <div className="o o4"></div>
       <App />
     </UserProvider>
   </BrowserRouter>,
