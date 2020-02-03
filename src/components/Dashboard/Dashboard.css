@@ -40,3 +40,8 @@
 button {
   margin-bottom: 20px;
 }
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
