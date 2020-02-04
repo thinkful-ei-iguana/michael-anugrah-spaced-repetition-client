@@ -16,7 +16,7 @@
   width: 100%;
   border-top: 3px solid white;
   width: 60vw;
-  height: 50vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

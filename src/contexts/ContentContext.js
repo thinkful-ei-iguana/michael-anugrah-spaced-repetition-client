@@ -1,6 +1,7 @@
 import React from 'react';
 import config from '../config';
 import TokenService from '../services/token-service';
+import LangService from '../services/lang-api-service';
 
 const ContentContext = React.createContext({
   error: null,
@@ -17,8 +18,15 @@ export class ContentProvider extends React.Component {
 
     this.state = {
       error: null,
-      language: {},
-      words: []
+      language: {
+        id: 0,
+        name: 'placeholder',
+        user_id: 0,
+        head: 1,
+        total_score: 0
+      },
+      words: [],
+      head: {}
     } 
   }
 
@@ -32,6 +40,9 @@ export class ContentProvider extends React.Component {
       language: resData.language,
       words: resData.words
     }));
+    LangService.getHead().then((resData) => this.setState({
+      head: resData
+    }))
   }  
 
   getLanguage = () => {

@@ -19,12 +19,9 @@ class Dashboard extends React.Component {
 
 
   render(){
-    console.log('user context: ', this.props.user);
-    console.log('content context: ', this.props.content);
     return(
       <div className="dashboardContainer">
         <h2>Welcome back, {this.props.user.user.name}!<br />{this.props.content &&this.props.content.language.name} </h2>
-        Total correct answers: {this.props.content.language.total_score}
         <Link to='/learn'>
         <button>Start practicing</button>
           </Link>

@@ -1,5 +1,7 @@
 import React from 'react';
-import './Statistics.css'
+import './Statistics.css';
+import { Link } from 'react-router-dom';
+import ContentContext from '../../contexts/ContentContext'
 
 class Stats extends React.Component {
   constructor(props) {
@@ -8,11 +10,17 @@ class Stats extends React.Component {
 
     }
   }
-
+  static contextType = ContentContext;
   render() {
-    console.log(this.props)
+    console.log(this.context);
     return(
-      <div className="stats">Total Score: {this.props.score}</div>
+      <div className="stats">
+        <Link to='/'>
+          <button>Dashboard</button>
+        </Link>
+        
+        Total Score: {this.props.score || 0}
+        </div>
     )
   }
 }
