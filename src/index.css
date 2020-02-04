@@ -34,7 +34,7 @@ body a{
 
 .o1{
   background:url(//image.ibb.co/nBJ818/bg.png);
-  z-index: -1;
+  z-index: -2;
 }
 
 .o2{
@@ -48,11 +48,11 @@ body a{
   opacity: 0.5;
 }
 
-.o3{
+/* .o3{
   background:url(//image.ibb.co/g76HuT/nebula.png);
   z-index: -3;
   animation:200s scroll2 infinite linear;
-}
+} */
 
 .o4{
   background:url(//image.ibb.co/b8VcuT/clouds.png);

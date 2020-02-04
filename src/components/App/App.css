@@ -31,3 +31,8 @@ section {
   justify-content: center;
   align-items: center;
 }
+
+.App {
+  position: relative;
+  z-index: 1;
+}

@@ -8,8 +8,14 @@
   margin-right: auto;
   text-align: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  height: 10vh;
+  max-height: 10vh;
+}
+.stats p{
+  font-size: 0.7em;
+  margin: 3px;
 }
 
 button{

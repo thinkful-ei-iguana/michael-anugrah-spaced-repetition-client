@@ -19,18 +19,15 @@ class Learning extends React.Component {
       <div>
         <div className="infoArea">
           <div className="infoHeader">
-            Kill me.
+          <h2>Translate the word:</h2>
+              <span>{this.context.head.nextWord}</span>
+              <br />
           </div>
 
           <div className="wordsHolder">
-            <div className="words">
-              <h2>Translate the word:</h2>
-              <span>{this.context.head.nextWord}</span>
-            </div>
-
             <div className="guess">
               <form>
-                <label for="learn-guess-input">What's the translation for this word?</label>
+                <label htmlFor="learn-guess-input">What's the translation for this word?</label>
                 <input id="learn-guess-input" type="text" required/>
                 <button type="submit">Submit your answer</button>
               </form>
@@ -41,7 +38,7 @@ class Learning extends React.Component {
 
         </div>
 
-        <Stats score={this.context.language ? this.context.language.total_score : 0}/>
+        <Stats />
       </div>
     )
   }

@@ -15,11 +15,7 @@ class Stats extends React.Component {
     console.log(this.context);
     return(
       <div className="stats">
-        <Link to='/'>
-          <button>Dashboard</button>
-        </Link>
-
-        <div className="statNums">
+     
           <p>
             Your total score is: {this.context.head.totalScore || 0}
           </p>
@@ -29,9 +25,8 @@ class Stats extends React.Component {
           <p>
             You have answered this word incorrectly {this.context.head.wordIncorrectCount} times.
           </p>
-        </div>
-        
-        </div>
+         
+      </div>
     )
   }
 }

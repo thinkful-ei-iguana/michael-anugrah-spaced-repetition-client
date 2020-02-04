@@ -7,6 +7,7 @@ const ContentContext = React.createContext({
   error: null,
   language: {},
   words: [],
+  head: {},
 })
 
 export default ContentContext;
