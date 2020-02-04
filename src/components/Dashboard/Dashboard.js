@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
 
@@ -22,17 +23,23 @@ class Dashboard extends React.Component {
     console.log('content context: ', this.props.content);
     return(
       <div className="dashboardContainer">
-        <h3>Welcome back, {this.props.user.user.name} !</h3>
-        <button>Practice Now!</button>
+        <h2>Welcome back, {this.props.user.user.name}!<br />{this.props.content &&this.props.content.language.name} </h2>
+        Total correct answers: {this.props.content.language.total_score}
+        <Link to='/learn'>
+        <button>Start practicing</button>
+          </Link>
         <div className="infoArea">
-          <div className="infoHeader">Words to practice in : </div>
+          <div className="infoHeader"><h3>Words to practice</h3></div>
           <div className="wordsHolder">
             <div className="words">Words:
+            <h4>{this.props.content.language.name}</h4>
             <ul>
               {this.props.content.words.map((word, index) => {
                 return(
-                  <li key={index}>
-                    {word.original}
+                  <li key={index}><h4>
+                  {word.original}</h4>
+                  correct answer count: {word.correct_count}<br />
+                  incorrect answer count: {word.incorrect_count}
                   </li>
                 )
               }) || this.state.words[0]}
@@ -43,7 +50,7 @@ class Dashboard extends React.Component {
               {this.props.content.words.map((word, index) => {
                 return(
                   <li key={index}>
-                    {word.correct_count} / {word.incorrect_count}
+                    correct answer count: {word.correct_count} 
                   </li>
                 )
               }) || this.state.words[0]}
