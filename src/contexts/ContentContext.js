@@ -5,7 +5,7 @@ import TokenService from '../services/token-service';
 const ContentContext = React.createContext({
   error: null,
   language: {},
-  words: []
+  words: [],
 })
 
 export default ContentContext;
@@ -14,22 +14,25 @@ export default ContentContext;
 export class ContentProvider extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       error: null,
       language: {},
       words: []
-    }
+    } 
   }
 
-  async componentDidMount() {
-    let responsedata = await this.getLanguage();
-    this.setState({
-      error: null,
-      language: responsedata.language,
-      words: responsedata.words
-    });
-    console.log(this.state);
+  componentDidMount() {
+    this.setContext();
   }
+
+  setContext = () => {
+    this.getLanguage().then((resData) => this.setState({
+      error: null,
+      language: resData.language,
+      words: resData.words
+    }));
+  }  
 
   getLanguage = () => {
     return fetch(`${config.API_ENDPOINT}/language`, {
@@ -43,7 +46,6 @@ export class ContentProvider extends React.Component {
     .then(response => response);
   }
 
-
   render() {
     const content = {
       error: this.state.error,
@@ -51,7 +53,7 @@ export class ContentProvider extends React.Component {
       words: this.state.words
     }
     return (
-      <ContentContext.Provider content={content}>
+      <ContentContext.Provider value={content}>
         {this.props.children}
       </ContentContext.Provider>
     )
