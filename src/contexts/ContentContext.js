@@ -61,7 +61,8 @@ export class ContentProvider extends React.Component {
     const content = {
       error: this.state.error,
       language: this.state.language,
-      words: this.state.words
+      words: this.state.words,
+      head: this.state.head
     }
     return (
       <ContentContext.Provider value={content}>

@@ -18,8 +18,19 @@ class Stats extends React.Component {
         <Link to='/'>
           <button>Dashboard</button>
         </Link>
+
+        <div className="statNums">
+          <p>
+            Your total score is: {this.context.head.totalScore || 0}
+          </p>
+          <p>
+            You have answered this word correctly {this.context.head.wordCorrectCount} times.
+          </p>
+          <p>
+            You have answered this word incorrectly {this.context.head.wordIncorrectCount} times.
+          </p>
+        </div>
         
-        Total Score: {this.props.score || 0}
         </div>
     )
   }

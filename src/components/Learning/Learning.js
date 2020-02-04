@@ -19,21 +19,26 @@ class Learning extends React.Component {
       <div>
         <div className="infoArea">
           <div className="infoHeader">
-            <h3>Practice Time!</h3>
+            Kill me.
           </div>
 
           <div className="wordsHolder">
-            <div className="words">Your word:
-            <h4>Word goes here</h4>
-            
+            <div className="words">
+              <h2>Translate the word:</h2>
+              <span>{this.context.head.nextWord}</span>
             </div>
+
             <div className="guess">
-              <input id="learn-guess-input" />
+              <form>
+                <label for="learn-guess-input">What's the translation for this word?</label>
+                <input id="learn-guess-input" type="text" required/>
+                <button type="submit">Submit your answer</button>
+              </form>
             </div>
-          </div>
-          <div className="button-holder">
-            <button type="submit">Guess!</button>
-          </div>
+
+        </div>
+
+
         </div>
 
         <Stats score={this.context.language ? this.context.language.total_score : 0}/>
