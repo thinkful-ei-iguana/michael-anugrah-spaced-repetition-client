@@ -6,6 +6,14 @@
   align-content: center;
 }
 
+.dashboardContainer button {
+  margin-bottom: 20px;
+}
+
+.dashboardContainer h2 {
+  text-align: center;
+}
+
 .infoArea {
   border: 3px solid white;
   border-radius: 3px;
@@ -28,9 +36,25 @@
 }
 
 .words {
-  border-right: 3px solid white;
-  min-width: 50%;
-  max-width: 50%;
+  min-width: 100%;
+  max-width: 100%;
+}
+.words h4 {
+  text-align: center;
+}
+
+.words ul {
+  margin: 0px;
+  padding: 0px;
+}
+.words li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 3px;
+  margin-bottom: 5px;
 }
 
 .count {

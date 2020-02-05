@@ -17,7 +17,7 @@ form {
   margin-bottom: 0;
 }
 
-input {
+.guess input {
   width: 100%;
   height: 100%;
   padding: 20%;

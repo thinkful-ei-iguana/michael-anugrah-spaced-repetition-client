@@ -31,12 +31,12 @@ const LangService = {
         'content-type':'application/json',
         'authorization':`Bearer ${TokenService.getAuthToken()}`
       },
-      body:{
-        //fill in here
-      }
+      body: JSON.stringify({
+        guess: guess
+      })
     })
     .then(res => res.json())
-    .then(rightOrWrong => rightOrWrong);
+    .then(feedback => feedback);
   }
 
 }

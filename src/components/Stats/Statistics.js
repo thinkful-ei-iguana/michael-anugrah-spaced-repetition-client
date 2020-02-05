@@ -1,6 +1,5 @@
 import React from 'react';
 import './Statistics.css';
-import { Link } from 'react-router-dom';
 import ContentContext from '../../contexts/ContentContext'
 
 class Stats extends React.Component {
@@ -12,12 +11,11 @@ class Stats extends React.Component {
   }
   static contextType = ContentContext;
   render() {
-    console.log(this.context);
     return(
       <div className="stats">
      
           <p>
-            Your total score is: {this.context.head.totalScore || 0}
+            Your total score is: {this.context.head.totalScore}
           </p>
           <p>
             You have answered this word correctly {this.context.head.wordCorrectCount} times.
