@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ContentContext from '../../contexts/ContentContext';
 import './Dashboard.css';
 
 
@@ -13,15 +14,15 @@ class Dashboard extends React.Component {
     }
   }
 
-  // {this.state.language}
  componentDidMount() {
  }
+ static contextType = ContentContext
 
 
   render(){
     return(
       <div className="dashboardContainer">
-        <h2>Welcome back, {this.props.user.user.name}!<br />{this.props.content &&this.props.content.language.name} </h2>
+        <h2>Welcome back, {this.props.user.user.name || 'User'}!<br />{this.props.content.language.name || 'Language'} </h2>
         <Link to='/learn'>
         <button>Start practicing</button>
           </Link>
@@ -29,7 +30,7 @@ class Dashboard extends React.Component {
           <div className="infoHeader"><h3>Words to practice</h3></div>
           <div className="wordsHolder">
             <div className="words">Words:
-            <h4>{this.props.content.language.name}</h4>
+            <h4>{this.props.content.language.name || 'Language'}</h4>
             <ul>
               {this.props.content.words.map((word, index) => {
                 return(
