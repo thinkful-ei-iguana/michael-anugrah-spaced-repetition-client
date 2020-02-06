@@ -33,12 +33,13 @@ class Dashboard extends React.Component {
  static contextType = ContentContext
 
   render(){
+    console.log(this.context)
     return(
       <div className="dashboardContainer">
 
         <h2>Welcome back, {this.props.user.user.name}!
         <br />
-        Language: {this.context.language.name }
+        Language: {this.context.language.name}
         <br />
         Total correct answers: {this.context.language.total_score} </h2>
 
