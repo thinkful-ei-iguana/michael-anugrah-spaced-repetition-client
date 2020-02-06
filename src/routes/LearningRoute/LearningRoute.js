@@ -14,7 +14,9 @@ class LearningRoute extends Component {
   render() {
     return (
       <section>
-        <Learning />
+        <div className="viewport">
+          <Learning />
+        </div>
       </section>
     );
   }
