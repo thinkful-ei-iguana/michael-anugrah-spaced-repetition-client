@@ -8,6 +8,7 @@ const ContentContext = React.createContext({
   language: {},
   words: [],
   head: {},
+  getHead: () => {},
   feedbackRes: {},
   nextWord: () => {},
   feedback: null,
@@ -33,6 +34,7 @@ export class ContentProvider extends React.Component {
       },
       words: [],
       head: {},
+      getHead: () => {},
       feedbackRes: {
         nextWord: '',
         wordCorrectCount: 0,
@@ -71,21 +73,26 @@ export class ContentProvider extends React.Component {
     )
   }
 
+  getHead = () => {
+    LangService.getHead().then((resData) => {
+      this.setState({
+      head: resData
+      })
+    });
+  } 
+
   setGuess = (guess) => {
     this.setState({
       guess: guess
     })
   }
 
-  setContext = () => {
-    this.getLanguage().then((resData) => this.setState({
+  setContext = async () => {
+    await this.getLanguage().then((resData) => this.setState({
       error: null,
       language: resData.language,
       words: resData.words
     }));
-    LangService.getHead().then((resData) => this.setState({
-      head: resData
-    }))
   } 
   
   setFeedback = (resData) => {
@@ -112,6 +119,7 @@ export class ContentProvider extends React.Component {
       language: this.state.language,
       words: this.state.words,
       head: this.state.head,
+      getHead: this.getHead,
       nextWord: this.state.nextWord,
       giveFeedback: this.state.giveFeedback,
       feedbackRes: this.state.feedbackRes,

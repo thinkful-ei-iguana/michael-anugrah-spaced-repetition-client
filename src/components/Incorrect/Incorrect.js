@@ -16,6 +16,7 @@ class Incorrect extends React.Component {
   }
 
   render() {
+    console.log('feedback response: ', this.context.feedbackRes)
     return (
       <div>
         Placeholder for incorrect response.

@@ -16,18 +16,21 @@ class Learning extends React.Component {
   }
 
   static contextType = ContentContext;
+  
+  componentDidMount() {
+    this.context.getHead();
+  }
 
-  handleSubmit = (ev) => {
+  handleSubmit = async (ev) => {
     ev.preventDefault();
     let guess = this.state.guess;
-
-    this.context.setGuess(guess);
-    LangService.postGuess(guess)
-    .then(feedback => {
-      this.context.setFeedback(feedback);
-      this.setState({correct: feedback.isCorrect})
-    }).then( () => this.setState({guess: ''}));
-
+    console.log('guess: ', guess);
+    await this.context.setGuess(guess);
+    console.log('Context guess: ', this.context.guess);
+    let feedback = await LangService.postGuess(guess);
+    await this.context.setFeedback(feedback);
+    this.setState({guess: ''});
+    this.setState({correct: feedback.isCorrect})
     this.context.giveFeedback();
   }
 
@@ -39,6 +42,8 @@ class Learning extends React.Component {
   }
 
   render() {
+    // console.log('head: ', this.context.head);
+    // console.log('feedback: ', this.context.feedback);
     return(
       <div>
         <div className="infoArea">
