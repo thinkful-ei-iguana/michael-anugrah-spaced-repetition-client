@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   align-content: center;
+  min-height: 60vh;
 }
 
 .dashboardContainer button {
@@ -17,18 +18,20 @@
 .infoArea {
   border: 3px solid white;
   border-radius: 3px;
-  background: rgba(255,255,255,0.4); 
+  background: rgba(255,255,255,0.4);
+  width: 50vw;
+  max-height: 50vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .wordsHolder {
-  width: 100%;
   border-top: 3px solid white;
-  width: 60vw;
-  min-height: 50vh;
+  width: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
 
 .infoHeader{
@@ -38,7 +41,9 @@
 .words {
   min-width: 100%;
   max-width: 100%;
+  overflow: scroll;
 }
+
 .words h4 {
   text-align: center;
 }

@@ -1,19 +1,21 @@
 Main {
   margin-top: 10vh;
   margin-bottom: 10vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   margin-left: auto;
   margin-right: auto;
   flex-direction: column;
-  overflow: hidden;
 }
 
 .viewport {
-  position: absolute;
-  top: 9.5vh;
+  position: fixed;
+  top: 10vh;
   bottom: 10vh;
   height: 80vh;
-  overflow: scroll;
+  width: 100vw;
+  overflow: hidden;
 }
 
 header {
@@ -44,4 +46,7 @@ section {
 .App {
   position: relative;
   z-index: 1;
+}
+::-webkit-scrollbar {
+  display: none;
 }

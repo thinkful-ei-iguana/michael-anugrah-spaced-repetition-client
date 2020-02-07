@@ -7,10 +7,8 @@ class DashboardRoute extends Component {
   
   render() {
     return (
-      <section>
-        <div className="viewport">
+      <section className="viewport">
           <Dashboard content={this.props.content} user={this.props.user}/>
-        </div>
         <Stats />    
       </section>
     );
