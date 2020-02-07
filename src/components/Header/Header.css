@@ -1,12 +1,16 @@
-header span{
+.logout{
   font-style: oblique;
+  text-align: right;
 }
 
 header a {
   font-weight: bold;
+  font-style: normal;
 }
 header nav {
   margin-top: 5px;
+  margin-right: 5px;
+  text-align: right;
 }
 
 nav:hover {

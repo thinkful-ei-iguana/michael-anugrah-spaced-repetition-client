@@ -16,7 +16,7 @@ class Learning extends React.Component {
   }
 
   static contextType = ContentContext;
-  
+
   componentDidMount() {
     this.context.getHead();
   }
@@ -24,9 +24,7 @@ class Learning extends React.Component {
   handleSubmit = async (ev) => {
     ev.preventDefault();
     let guess = this.state.guess;
-    console.log('guess: ', guess);
     await this.context.setGuess(guess);
-    console.log('Context guess: ', this.context.guess);
     let feedback = await LangService.postGuess(guess);
     await this.context.setFeedback(feedback);
     this.setState({guess: ''});
@@ -42,8 +40,6 @@ class Learning extends React.Component {
   }
 
   render() {
-    // console.log('head: ', this.context.head);
-    // console.log('feedback: ', this.context.feedback);
     return(
       <div>
         <div className="infoArea">

@@ -1,0 +1,15 @@
+.correct {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 3px solid white;
+  height: 100%;
+}
+
+.correct p{
+  text-align: center;
+}
+.correct button {
+  margin-top: 10px;
+}
