@@ -92,6 +92,7 @@ export class ContentProvider extends React.Component {
       language: resData.language,
       words: resData.words
     }));
+    this.getHead();
   } 
   
   setFeedback = (resData) => {
