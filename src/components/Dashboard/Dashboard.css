@@ -18,8 +18,15 @@
   overflow: hidden;
 }
 
-.infoHeader{
+.infoHeader {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infoHeader h3{
   text-align: center;
+  height: 100%;
 }
 
 .wordsHolder {
@@ -39,6 +46,8 @@
 
 .words h4 {
   text-align: center;
+  margin-top: 0px;
+  margin-bottom: 8px;
 }
 
 .words ul {

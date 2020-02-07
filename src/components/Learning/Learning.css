@@ -17,7 +17,12 @@ form {
 form button {
   margin-top: 15px;
 }
-
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .guess input {
   height: 20vh;
   width: 100%;

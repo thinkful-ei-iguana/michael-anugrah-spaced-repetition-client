@@ -44,8 +44,10 @@ class Learning extends React.Component {
       <div>
         <div className="infoArea">
           <div className="infoHeader">
-          <h2>Translate the word:</h2>
+            <div className="stack">
+              <h2>Translate the word:</h2>
               <span>{this.context.head.nextWord}</span>
+            </div>
               <br />
           </div>
           {!this.context.feedback && 
