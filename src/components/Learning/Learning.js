@@ -23,7 +23,7 @@ class Learning extends React.Component {
 
   handleSubmit = async (ev) => {
     ev.preventDefault();
-    let guess = this.state.guess;
+    let guess = this.state.guess.toLowerCase();
     await this.context.setGuess(guess);
     let feedback = await LangService.postGuess(guess);
     await this.context.setFeedback(feedback);
