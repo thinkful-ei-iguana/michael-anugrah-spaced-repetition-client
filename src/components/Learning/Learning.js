@@ -64,8 +64,6 @@ class Learning extends React.Component {
         {this.context.feedback && <Feedback correct={this.state.correct}/>}
 
         </div>
-
-        <Stats />
       </div>
     )
   }

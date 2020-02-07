@@ -13,7 +13,6 @@ class Stats extends React.Component {
   render() {
     return(
       <div className="stats">
-     
           <p>
             Your total score is: <strong>{this.context.head.totalScore}</strong>
           </p>

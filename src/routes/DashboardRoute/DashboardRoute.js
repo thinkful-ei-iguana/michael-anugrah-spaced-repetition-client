@@ -15,7 +15,6 @@ class DashboardRoute extends Component {
     return (
       <section className="viewport">
           <Dashboard content={this.props.content} user={this.props.user}/>
-        <Stats />    
       </section>
     );
   }

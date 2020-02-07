@@ -1,8 +1,7 @@
 Main {
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  top: 10vh;
+  bottom: 10vh;
   width: 100vw;
-  height: 100vh;
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -22,7 +21,7 @@ Main {
 
 header {
   background-color: rgba(255,255,255,0.4);
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
@@ -36,6 +35,15 @@ header {
   padding: 5px;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
 section {
   display: flex;
   margin-left: auto;
@@ -46,9 +54,9 @@ section {
 }
 
 .App {
-  position: relative;
   z-index: 1;
 }
+
 ::-webkit-scrollbar {
   display: none;
 }
