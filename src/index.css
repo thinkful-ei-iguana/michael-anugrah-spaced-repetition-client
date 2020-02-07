@@ -48,15 +48,15 @@ body a{
   opacity: 0.5;
 }
 
-/* .o3{
+.o3{
   background:url(//image.ibb.co/g76HuT/nebula.png);
-  z-index: -3;
+  z-index: -2;
   animation:200s scroll2 infinite linear;
-} */
+}
 
 .o4{
   background:url(//image.ibb.co/b8VcuT/clouds.png);
-  z-index: -3;
+  z-index: -2;
   animation:400s scroll infinite linear;
 }
 
