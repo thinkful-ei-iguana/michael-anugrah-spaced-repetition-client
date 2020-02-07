@@ -7,10 +7,10 @@ Main {
   margin-right: auto;
   flex-direction: column;
   left: 0px;
+  position: absolute;
 }
 
 .viewport {
-  position: fixed;
   top: 10vh;
   bottom: 10vh;
   height: 80vh;
