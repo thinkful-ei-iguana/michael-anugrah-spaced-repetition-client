@@ -54,7 +54,7 @@ class Learning extends React.Component {
             <div className="guess">
               <form onSubmit={this.handleSubmit}>
                 <label htmlFor="learn-guess-input">What's the translation for this word?</label>
-                <input id="learn-guess-input" value={this.state.guess} onChange={this.changeGuess} type="text" required/>
+                <input id="learn-guess-input" value={this.state.guess} onChange={this.changeGuess} type="text" autocomplete="off" required/>
                 <button type="submit">Submit your answer</button>
               </form>
             </div>
