@@ -15,13 +15,13 @@ class Stats extends React.Component {
       <div className="stats">
      
           <p>
-            Your total score is: {this.context.head.totalScore}
+            Your total score is: <strong>{this.context.head.totalScore}</strong>
           </p>
           <p>
-            You have answered this word correctly {this.context.head.wordCorrectCount} times.
+            You have answered this word correctly <strong>{this.context.head.wordCorrectCount}</strong> times.
           </p>
           <p>
-            You have answered this word incorrectly {this.context.head.wordIncorrectCount} times.
+            You have answered this word incorrectly <strong>{this.context.head.wordIncorrectCount}</strong> times.
           </p>
          
       </div>
