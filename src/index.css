@@ -24,6 +24,10 @@ body a{
   --font-size: calc(10px + 1vmin);
 }
 
+#root {
+  padding: 0px;
+}
+
 .o{
   position:fixed;
   top:0;
