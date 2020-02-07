@@ -7,6 +7,7 @@ const ContentContext = React.createContext({
   error: null,
   language: {},
   words: [],
+  setContext: () => {},
   head: {},
   getHead: () => {},
   feedbackRes: {},
@@ -32,6 +33,7 @@ export class ContentProvider extends React.Component {
         head: 1,
         total_score: 0
       },
+      setContext: () => {},
       words: [],
       head: {},
       getHead: () => {},
@@ -52,9 +54,6 @@ export class ContentProvider extends React.Component {
     } 
   }
 
-  componentDidMount() {
-    this.setContext();
-  }
 
   giveFeedback = () => {
     this.setState({feedback: true})
@@ -119,6 +118,7 @@ export class ContentProvider extends React.Component {
       language: this.state.language,
       words: this.state.words,
       head: this.state.head,
+      setContext: this.setContext,
       getHead: this.getHead,
       nextWord: this.state.nextWord,
       giveFeedback: this.state.giveFeedback,

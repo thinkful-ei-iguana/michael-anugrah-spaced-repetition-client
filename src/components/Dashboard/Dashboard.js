@@ -14,10 +14,6 @@ class Dashboard extends React.Component {
     }
   }
 
- componentDidMount() {
-   
- }
-
  static defaultProps = {
   language: {
     name: 'Default Language',
@@ -39,7 +35,7 @@ class Dashboard extends React.Component {
 
         <h2>Welcome back, {this.props.user.user.name || 'placeholder'}!
         <br />
-        Language: {this.context.language.name || 'placeholder'}
+        Language: {(this.context.language.name !== undefined && this.context.language.name) || 'placeholder'}
         <br />
         Total correct answers: {this.context.language.total_score || 'placeholder'} </h2>
 

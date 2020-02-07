@@ -17,8 +17,6 @@ class Correct extends React.Component {
   render() {
     return(
       <div>
-        Placeholder for incorrect response.
-
         <div className="DisplayScore">
           <p>Your total score is: {this.context.feedbackRes.totalScore}</p>
         </div>
