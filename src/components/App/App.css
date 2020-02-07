@@ -7,6 +7,7 @@ Main {
   margin-left: auto;
   margin-right: auto;
   flex-direction: column;
+  left: 0px;
 }
 
 .viewport {
@@ -16,6 +17,7 @@ Main {
   height: 80vh;
   width: 100vw;
   overflow: hidden;
+  left: 0px;
 }
 
 header {
@@ -49,4 +51,32 @@ section {
 }
 ::-webkit-scrollbar {
   display: none;
+}
+
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  min-height: 60vh;
+  width: 100vw;
+}
+.infoArea {
+  width: 95vw;
+}
+
+@media only screen and (min-width: 768px) {
+  .dashboardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-height: 60vh;
+  }
+
+  .infoArea{
+    width: 50vw;
+  }
 }

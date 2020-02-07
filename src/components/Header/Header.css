@@ -1,3 +1,14 @@
+header span{
+  font-style: oblique;
+}
+
+header a {
+  font-weight: bold;
+}
+header nav {
+  margin-top: 5px;
+}
+
 nav:hover {
   cursor: pointer;
 }

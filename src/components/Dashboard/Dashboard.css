@@ -1,11 +1,4 @@
-.dashboardContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  min-height: 60vh;
-}
+
 
 .dashboardContainer button {
   margin-bottom: 20px;
@@ -19,29 +12,29 @@
   border: 3px solid white;
   border-radius: 3px;
   background: rgba(255,255,255,0.4);
-  width: 50vw;
-  max-height: 50vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
-}
-
-.wordsHolder {
-  border-top: 3px solid white;
-  width: 100%;
-  min-height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  overflow: hidden;
 }
 
 .infoHeader{
   text-align: center;
 }
 
+.wordsHolder {
+  border-top: 3px solid white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: scroll;
+}
+
 .words {
   min-width: 100%;
   max-width: 100%;
-  overflow: scroll;
 }
 
 .words h4 {
