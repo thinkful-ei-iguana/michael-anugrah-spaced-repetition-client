@@ -36,7 +36,7 @@ class Dashboard extends React.Component {
         <br />
         Language: {(this.context.language.name !== undefined && this.context.language.name) || 'placeholder'}
         <br />
-        Total correct answers: {this.context.language.total_score || 'placeholder'} </h2>
+        Total correct answers: {this.context.head.totalScore || '0'} </h2>
 
         <Link to='/learn'>
         <button>Start practicing</button>
