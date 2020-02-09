@@ -26,7 +26,9 @@ export default class App extends Component {
         <Header />
         <main>
           {hasError && (
-            <p>There was an error! Oh no!</p>
+            <div className="error">
+              <p>There was an error! Oh no!</p>
+            </div>
           )}
 
           <Switch>

@@ -70,8 +70,18 @@ section {
   min-height: 60vh;
   width: 100vw;
 }
+
 .infoArea {
   width: 95vw;
+}
+
+.error {
+  border: 3px solid White;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-style: oblique;
+  font-size: 1.5em;
 }
 
 @media only screen and (min-width: 768px) {
