@@ -14,5 +14,5 @@ Build by Michael Weedman and Anugrah Lambogo
 ## Screenshots
 
 ![Image - dashboard](https://github.com/thinkful-ei-iguana/michael-anugrah-spaced-repetition-client/blob/master/screenshots/Dashboard.PNG?raw=true "dashboard")
-![Image - learning]
-![Image - login]
+![Image - learning](https://github.com/thinkful-ei-iguana/michael-anugrah-spaced-repetition-client/blob/master/screenshots/Learning.PNG?raw=true "learning")
+![Image - login](https://github.com/thinkful-ei-iguana/michael-anugrah-spaced-repetition-client/blob/master/screenshots/Login.PNG?raw=true "login")
