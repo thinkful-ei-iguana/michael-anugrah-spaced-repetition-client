@@ -8,7 +8,9 @@ Build by Michael Weedman and Anugrah Lambogo
 ## Technology Used
 
 **Client:** *ReactJs, HTML, CSS*
+
 **Server/DB:** *NodeJS, Express, PostgreSQL*
+
 **Testing:** *Mocha, Chai, Cypress*
 
 ## Screenshots
