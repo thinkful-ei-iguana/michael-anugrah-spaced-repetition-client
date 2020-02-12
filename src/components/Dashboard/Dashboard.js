@@ -25,6 +25,9 @@ class Dashboard extends React.Component {
     }
   }
  }
+ noFeedback = () => {
+   this.context.feedbackFalse();
+ }
 
  static contextType = ContentContext
 
@@ -39,7 +42,7 @@ class Dashboard extends React.Component {
         Total correct answers: {this.context.head.totalScore || '0'} </h2>
 
         <Link to='/learn'>
-        <button>Start practicing</button>
+        <button onClick={this.noFeedback}>Start practicing</button>
           </Link>
         <div className="infoArea">
           <div className="infoHeader"><h3>Words to practice</h3></div>

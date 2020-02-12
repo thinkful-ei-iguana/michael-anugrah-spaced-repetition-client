@@ -14,7 +14,8 @@ const ContentContext = React.createContext({
   nextWord: () => {},
   feedback: null,
   guess: '',
-  setGuess: () => {}
+  setGuess: () => {},
+  feedbackFalse: () => {},
 })
 
 export default ContentContext;
@@ -50,7 +51,8 @@ export class ContentProvider extends React.Component {
       nextWord: this.nextWord,
       giveFeedback: this.giveFeedback,
       setFeedback: () => {},
-      feedback: false
+      feedback: false,
+      feedbackFalse: () => {},
     } 
   }
 
@@ -83,6 +85,12 @@ export class ContentProvider extends React.Component {
   setGuess = (guess) => {
     this.setState({
       guess: guess
+    })
+  }
+
+  feedbackFalse = () => {
+    this.setState({
+      feedback: false
     })
   }
 
@@ -127,7 +135,8 @@ export class ContentProvider extends React.Component {
       setFeedback: this.setFeedback,
       feedback: this.state.feedback,
       guess: this.state.guess,
-      setGuess: this.setGuess
+      setGuess: this.setGuess,
+      feedbackFalse: this.feedbackFalse,
     }
     return (
       <ContentContext.Provider value={content}>
